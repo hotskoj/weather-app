@@ -6,7 +6,7 @@ export const fetchWeather = createAsyncThunk("/search", async (info) => {
   const { city, country, state } = info;
   const options = {
     method: "GET",
-    url: `http://localhost:3000/search/${city}/${country}/${state}`,
+    url: `/search/${city}/${country}/${state}`,
   };
   const response = await axios.request(options);
   return response.data;
